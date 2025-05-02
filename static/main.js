@@ -26,14 +26,30 @@ document.addEventListener("DOMContentLoaded", function () {
         const result = await response.json();
   
         const labelMap = {
-          0: "Iris Setosa 🌸",
-          1: "Iris Versicolor 🌼",
-          2: "Iris Virginica 🌺"
+          0: {
+            name: "Iris Setosa 🌸",
+            description: "A small and delicate flower with light colors.",
+          },
+          1: {
+            name: "Iris Versicolor 🌼",
+            description: "A mid-sized flower with vibrant bluish-purple petals.",
+          },
+          2: {
+            name: "Iris Virginica 🌺",
+            description: "A large flower with deep violet-blue tones.",
+          },
         };
   
-        resultDiv.innerHTML = `<h2>Prediction: ${labelMap[result.prediction]}</h2>`;
+        const label = labelMap[result.prediction];
+  
+        resultDiv.innerHTML = `
+          <div class="card shadow-sm p-3">
+            <h3 class="text-success">${label.name}</h3>
+            <p class="mb-0">${label.description}</p>
+          </div>
+        `;
       } catch (err) {
-        resultDiv.innerHTML = `<p>Error: ${err.message}</p>`;
+        resultDiv.innerHTML = `<div class="alert alert-danger">Error: ${err.message}</div>`;
       }
     });
   });
