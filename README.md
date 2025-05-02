@@ -131,7 +131,7 @@ You are free to use, modify, and distribute this code for personal or commercial
 
 ## 👤 Author
 
-**Guillermo V. Red, Jr., DIT**  
-Assistant Professor, Researcher, and AI Enthusiast  
+**Gui Red**  
+Researcher, and AI Enthusiast  
 📍 Bicol University, Philippines  
 🔗 [GitHub](https://github.com/guired513)
