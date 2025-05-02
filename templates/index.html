@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Iris Flower Predictor</title>
+</head>
+<body>
+  <h1>Iris Flower Classification</h1>
+  <p>This application uses a machine learning model trained on the famous Iris dataset to predict the species of an iris flower based on 4 flower measurements.</p>
+
+  <form method="POST">
+    <label>Sepal Length:</label><input type="text" name="sepal_length"><br>
+    <label>Sepal Width:</label><input type="text" name="sepal_width"><br>
+    <label>Petal Length:</label><input type="text" name="petal_length"><br>
+    <label>Petal Width:</label><input type="text" name="petal_width"><br>
+    <input type="submit" value="Predict">
+  </form>
+
+  {% if prediction %}
+    <h2>Predicted Species: {{ prediction }}</h2>
+    <p><strong>Description:</strong> {{ description }}</p>
+  {% endif %}
+</body>
+</html>
